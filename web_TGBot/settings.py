@@ -24,7 +24,12 @@ SECRET_KEY = 'django-insecure-19^b)gcw^oy3z#a4wto)9e-3pvrz!fv(ev)ca5m&i$6!a*^&wu
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['ozon-wb-monitor.ru', 'www.ozon-wb-monitor.ru', 'strobokukagra.beget.app', 'www.strobokukagra.beget.app', 'localhost']
+ALLOWED_HOSTS = ['ozon-wb-monitor.ru',
+                 'www.ozon-wb-monitor.ru',
+                 'strobokukagra.beget.app',
+                 'www.strobokukagra.beget.app',
+                 'localhost',
+                 '127.0.0.1']
 
 
 # Application definition
@@ -117,3 +122,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Добавьте правильный путь:
+STATICFILES_DIRS = [
+    BASE_DIR / 'myapp/static',  # вот здесь ваши статические файлы
+]
