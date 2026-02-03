@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-19^b)gcw^oy3z#a4wto)9e-3pvrz!fv(ev)ca5m&i$6!a*^&wu
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['ozon-wb-monitor.ru', 'www.ozon-wb-monitor.ru']
+ALLOWED_HOSTS = ['ozon-wb-monitor.ru', 'www.ozon-wb-monitor.ru', 'strobokukagra.beget.app', 'www.strobokukagra.beget.app', 'localhost']
 
 
 # Application definition
