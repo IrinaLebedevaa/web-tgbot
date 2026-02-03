@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sections.css' %}">
+    <script src="{% static 'js/button_main_bot.js' %}"></script>
+    <script src="{% static 'js/button_hero_bot.js' %}"></script>
+    <script src="{% static 'js/button_hero_card1.js' %}"></script>
+    <script src="{% static 'js/button_hero_card2.js' %}"></script>
+    <script src="{% static 'js/button_hero_card3.js' %}"></script>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="container">
+
+                    <div class="hero__title">
+                        <h1>Бот для отслеживания цен на Ozon, WildBerries и Яндекс.Маркет</h1>
+                        <p>Что умеет бот?</p>
+                    </div>
+
+                    <ul class="hero__list">
+                        <li class="hero__card">
+                            <span class="hero__card-text">Отслеживает цены на Ozon, WB, Yandex.Market</span>
+                            <button id="button_hero_card1" class="hero__card-btn" onclick="location.href='#main_title_1'">></button>
+                        </li>
+                        <li class="hero__card">
+                            <span class="hero__card-text">Строит графики изменения цен</span>
+                            <button id="button_hero_card2" class="hero__card-btn" onclick="location.href='#main_title_2'">></button>
+                        </li>
+                        <li class="hero__card">
+                            <span class="hero__card-text">Находит выгодные товары</span>
+                            <button id="button_hero_card3" class="hero__card-btn" onclick="location.href='#main_title_3'">></button>
+                        </li>
+                    </ul>
+
+
+                    <div id="button_hero_bot" class="hero__button-container">
+                        <a href="https://t.me/marketplace_history_bot" class="button-one" target="_blank" rel="noopener">Попробовать бота</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main">
+            <div class="container">
+                <div id="main_title_1" class="main_title">
+                    <h2>Отслеживает цены на Ozon, WB, Yandex.Market</h2>
+                    <div class="main_card">
+                        <div class="img_frame">
+                            <img class="img1"
+                                 src="https://cs16.pikabu.ru/s/2025/10/23/09/wi3ciqyd.jpg"
+                                 alt="Графики мониторинга истории изменения цен">
+                        </div>
+                            <div class="main_card-text">
+                                <p>Просто отправьте ссылку на товар</p>
+                                <p>Следующим сообщением укажите цену, при падении ниже которой бот должен вас уведомить</p>
+                                <p>Если цена упала незначительно — бот не побеспокоит</p>
+                            </div>
+
+                    </div>
+
+                </div>
+                <div id="main_title_2" class="main_title">
+                    <h2>Строит графики изменения цен</h2>
+                    <div class="main_card">
+                        <div class="img_frame">
+                            <img class="img2"
+                                 src="https://cs16.pikabu.ru/s/2025/10/23/09/kvdcj54i_lg.jpg"
+                                 alt="Графики мониторинга истории изменения цен">
+                        </div>
+                        <div class="main_card-text">
+                            <p>Бот покажет динамику цены на выбранный товар. У вас будет возможность приобрести товар дешевле</p>
+                            <p>2 типа графиков:</p>
+                            <p>/ простой (строится быстро, но без лишних подробностей)</p>
+                            <p>/ красивый, с удобным интерфейсом</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="main_title_3" class="main_title">
+                    <h2>Находит выгодные товары</h2>
+                    <div class="main_card">
+                        <div class="img_frame">
+                            <img class="img3"
+                                 src="https://cs16.pikabu.ru/s/2025/10/23/09/hrfcje2j.jpg"
+                                 alt="Пример сообщения">
+                        </div>
+                        <div class="main_card-text">
+                            <p>Кнопка «Показать 5 выгодных товаров» покажет позиции, где последняя цена ниже средней как минимум на 25%</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="button_main_bot" class="hero__button-container">
+                    <a href="https://t.me/marketplace_history_bot" class="button-one">Попробовать бота</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
