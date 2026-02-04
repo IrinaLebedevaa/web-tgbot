@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-19^b)gcw^oy3z#a4wto)9e-3pvrz!fv(ev)ca5m&i$6!a*^&wu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['ozon-wb-monitor.ru', 'www.ozon-wb-monitor.ru']
+DEBUG = True
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -116,4 +116,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    str(BASE_DIR / 'myapp' / 'static')
+]
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'
