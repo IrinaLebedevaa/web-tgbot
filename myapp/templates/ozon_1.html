@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Отслеживание цен Ozon и Wildberries — Telegram бот</title>
+
+    <meta name="description" content="Telegram-бот для отслеживания цен на Ozon, Wildberries и Яндекс.Маркет. История цен, графики, уведомления о снижении стоимости товаров.">
+    <meta name="keywords" content="отслеживание цен ozon, отслеживание цен wildberries, wb цена история, бот для отслеживания цен, мониторинг цен маркетплейсов, история цен ozon, история цен wb">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Бот для отслеживания цен на Ozon и Wildberries">
+    <meta property="og:description" content="История цен, графики и уведомления о снижении стоимости товаров на маркетплейсах">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sections.css' %}">
+
+    <script defer src="{% static 'js/button_main_bot.js' %}"></script>
+    <script defer src="{% static 'js/button_hero_bot.js' %}"></script>
+    <script defer src="{% static 'js/button_hero_card1.js' %}"></script>
+    <script defer src="{% static 'js/button_hero_card2.js' %}"></script>
+    <script defer src="{% static 'js/button_hero_card3.js' %}"></script>
+</head>
+
+<body>
+<main>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="container">
+
+                <div class="hero__title">
+                    <h1>Отслеживание цен на Ozon и Wildberries</h1>
+                    <p>Telegram-бот для мониторинга цен на маркетплейсах</p>
+                </div>
+
+                <ul class="hero__list">
+                    <li class="hero__card">
+                        <span class="hero__card-text">
+                            Мониторинг цен на Ozon, Wildberries и Яндекс.Маркет
+                        </span>
+                        <button class="hero__card-btn" onclick="location.href='#tracking'">></button>
+                    </li>
+                    <li class="hero__card">
+                        <span class="hero__card-text">
+                            История цен и графики изменения стоимости
+                        </span>
+                        <button class="hero__card-btn" onclick="location.href='#charts'">></button>
+                    </li>
+                    <li class="hero__card">
+                        <span class="hero__card-text">
+                            Поиск товаров со сниженной ценой
+                        </span>
+                        <button class="hero__card-btn" onclick="location.href='#deals'">></button>
+                    </li>
+                </ul>
+
+                <div class="hero__button-container">
+                    <a href="https://t.me/marketplace_history_bot?start=main"
+                       class="button-one"
+                       target="_blank"
+                       rel="noopener">
+                        Запустить бота
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container">
+
+            <div id="tracking" class="main_title">
+                <h2>Мониторинг цен на Ozon и Wildberries</h2>
+                <div class="main_card">
+                    <div class="main_card-text">
+                        <p>
+                            Бот автоматически отслеживает изменение цен на товары в Ozon, Wildberries и Яндекс.Маркете.
+                        </p>
+                        <p>
+                            Достаточно отправить ссылку на товар и указать цену, ниже которой требуется уведомление.
+                        </p>
+                        <p>
+                            Уведомления приходят только при значимом снижении стоимости.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="charts" class="main_title">
+                <h2>История цен и графики</h2>
+                <div class="main_card">
+                    <div class="main_card-text">
+                        <p>
+                            Для каждого товара доступна история изменения цены.
+                        </p>
+                        <p>
+                            Бот строит графики, позволяющие оценить динамику стоимости и выбрать лучший момент для покупки.
+                        </p>
+                        <p>
+                            Поддерживаются графики для Ozon, Wildberries и Яндекс.Маркета.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="deals" class="main_title">
+                <h2>Поиск выгодных товаров</h2>
+                <div class="main_card">
+                    <div class="main_card-text">
+                        <p>
+                            Бот автоматически находит товары, текущая цена которых заметно ниже средней.
+                        </p>
+                        <p>
+                            Это позволяет быстро находить реальные скидки без ручного анализа.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__button-container">
+                <a href="https://t.me/marketplace_history_bot?start=main"
+                   class="button-one"
+                   target="_blank"
+                   rel="noopener">
+                    Перейти к боту
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+</body>
+</html>
