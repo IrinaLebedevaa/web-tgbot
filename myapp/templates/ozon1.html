@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Telegram-бот для отслеживания цен на Ozon, Wildberries и маркетплейсы</title>
+
+    <meta name="description" content="Бот для отслеживания цен на Ozon, Wildberries, Яндекс.Маркет, Lamoda, Auto.ru и Ленте. История цен, графики, уведомления о падении стоимости и выгодные товары.">
+    <meta name="keywords" content="отслеживание цен ozon, история цен wb, бот для отслеживания цен, мониторинг цен маркетплейсов, график цены ozon, выгодные товары wildberries, кешбэк маркетплейсы, уведомление о снижении цены">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Telegram-бот для отслеживания цен на маркетплейсах">
+    <meta property="og:description" content="Следите за ценами на Ozon, WB, Яндекс.Маркет, Lamoda, Auto.ru и Ленте с помощью Telegram-бота. История цен, графики и уведомления о выгодных предложениях.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sections.css' %}">
+
+    <script defer src="{% static 'js/button_main_bot.js' %}"></script>
+    <script defer src="{% static 'js/button_hero_bot.js' %}"></script>
+    <script defer src="{% static 'js/button_hero_card1.js' %}"></script>
+    <script defer src="{% static 'js/button_hero_card2.js' %}"></script>
+    <script defer src="{% static 'js/button_hero_card3.js' %}"></script>
+</head>
+
+<body>
+<main>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="container">
+                <div class="hero__title">
+                    <h1>Отслеживание цен на маркетплейсах</h1>
+                    <p>БЕСПЛАТНЫЙ Telegram-бот для мониторинга цен и уведомлений о снижении стоимости товаров</p>
+                </div>
+
+                <ul class="hero__list">
+                    <li class="hero__card">
+                        <span class="hero__card-text">
+                            Мониторинг цен на Ozon, Wildberries, Яндекс.Маркет, Lamoda, Auto.ru и Ленте
+                        </span>
+                        <button class="hero__card-btn" onclick="location.href='#tracking'">></button>
+                    </li>
+                    <li class="hero__card">
+                        <span class="hero__card-text">
+                            История цен и графики изменения стоимости товаров
+                        </span>
+                        <button class="hero__card-btn" onclick="location.href='#charts'">></button>
+                    </li>
+                    <li class="hero__card">
+                        <span class="hero__card-text">
+                            Выгодные товары и кешбэк
+                        </span>
+                        <button class="hero__card-btn" onclick="location.href='#deals'">></button>
+                    </li>
+                </ul>
+
+                <div class="hero__button-container">
+                    <a href="https://t.me/marketplace_history_bot?start=ozon1"
+                       class="button-one"
+                       target="_blank"
+                       rel="noopener">
+                        Запустить бота
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container">
+
+            <div id="tracking" class="main_title">
+                <h2>Мониторинг цен на маркетплейсах</h2>
+                <div class="main_card">
+                    <div class="main_card-text">
+                        <p>Бот отслеживает цены на Ozon, Wildberries, Яндекс.Маркет, Lamoda, Auto.ru и Ленте в режиме реального времени.</p>
+                        <p>Отправьте ссылку на товар и укажите желаемую цену — бот уведомит, когда стоимость упадет ниже этого значения.</p>
+                        <p>Поддерживается отрицательная корректировка цены для отслеживания скидок и специальных предложений.</p>
+                        <p>База содержит миллионы товаров, что позволяет находить изменения цен быстро и точно.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="charts" class="main_title">
+                <h2>История цен и графики</h2>
+                <div class="main_card">
+                    <div class="main_card-text">
+                        <p>Для каждого товара можно построить график изменения цен за весь период доступных данных.</p>
+                        <p>Бот формирует графики как для Ozon и Wildberries, так и для Яндекс.Маркета, Lamoda и других маркетплейсов.</p>
+                        <p>Графики помогают понять динамику цен и выбрать оптимальный момент для покупки.</p>
+                        <p>Все графики создаются автоматически и отправляются в Telegram в виде изображений.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="deals" class="main_title">
+                <h2>Выгодные товары и кешбэк</h2>
+                <div class="main_card">
+                    <div class="main_card-text">
+                        <p>Бот анализирует товары и выделяет позиции, где цена ниже средней или есть высокий кешбэк.</p>
+                        <p>Вы сможете мгновенно находить лучшие скидки и экономить на покупках без ручного мониторинга.</p>
+                        <p>Поддержка поиска товаров с высоким кешбэком на Ozon и других маркетплейсах позволяет увеличить выгоду при покупках.</p>
+                        <p>Все уведомления приходят в Telegram с детализацией цены, процентом скидки и суммой кешбэка.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="faq" class="main_title">
+                <h2>Дополнительно</h2>
+                <div class="main_card">
+                    <div class="main_card-text">
+                        <p>Бот сохраняет все товары, которые вы отслеживаете, даже при временной недоступности сервисов.</p>
+                        <p>Поддерживаются команды для удаления товаров из отслеживания по ссылке или по всему маркетплейсу.</p>
+                        <p>Статистика по экономии и построенным графикам доступна каждому пользователю.</p>
+                        <p>Бот работает полностью в Telegram без необходимости сторонних приложений.</p>
+                        <p>Регулярные обновления позволяют отслеживать товары с высокой точностью и скоростью.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__button-container">
+                <a href="https://t.me/marketplace_history_bot?start=ozon1"
+                   class="button-one"
+                   target="_blank"
+                   rel="noopener">
+                    Перейти к боту
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+</body>
+</html>
