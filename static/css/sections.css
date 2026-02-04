@@ -1,0 +1,141 @@
+/* общий контейнер для горизонтальных отступов и центрирования */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: 5rem; /* 80px слева и справа */
+}
+
+/* секция hero с вертикальными отступами */
+.hero {
+    padding-block: 3rem; /* 96px сверху и снизу */
+    background: #ffffff;
+}
+
+
+.hero-bg {
+    max-width: 1350px;
+    margin: 0 auto;
+
+    padding: 5rem 0;
+
+    background: linear-gradient(
+            135deg,
+            #E6ECFC 0%,
+
+            #F2E9E5 100%
+    );
+
+    border-radius: 48px;
+}
+
+.hero-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* заголовки */
+.hero__title h1 {
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-family: 'Inter Regular', sans-serif;
+    color: #3D496D;
+}
+
+.hero__title p {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-top: 3rem;   /* расстояние от h1 */
+    margin-bottom: 1rem;  /* расстояние до карточек */
+    font-family: 'Inter Regular', sans-serif;
+    color: #3D496D;
+}
+
+/* сетка карточек */
+.hero__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem; /* 80px между карточками */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* карточка */
+.hero__card {
+    display: flex;
+    justify-content: space-between; /* текст слева, кнопка справа */
+    align-items: center;            /* по вертикали */
+    padding: 1.5rem 2.5rem;
+
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-family: 'Inter Regular', sans-serif;
+    text-align: left;
+    border: #3D496D 1px solid;
+}
+
+
+.hero__card-text {
+    flex: 1; /* текст занимает всё место слева */
+}
+
+.hero__card-btn {
+    background: #3D496D;;
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero__card-btn:hover {
+    background-color: #364363;
+    transform: translateX(4px); /* лёгкое смещение вправо при hover */
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding-inline: 2rem; /* меньше отступы на мобильных */
+    }
+
+    .hero__list {
+        gap: 2rem;
+    }
+}
+
+/* Контейнер кнопки, чтобы центрировать и опустить вниз */
+.hero__button-container {
+    display: flex;
+    justify-content: center; /* по горизонтали */
+    margin-top: 2rem;
+    text-decoration: none;
+}
+
+/* Стили кнопки */
+.button-one {
+    padding: 1rem 6rem;           /* вертикальные и горизонтальные отступы */
+    font-size: 1.2rem;
+    font-family: 'Inter Regular', sans-serif;
+    border-radius: 8px;
+    background-color: #364363;    /* начальный цвет */
+    color: #fff;                  /* текст белый */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* плавный переход цвета */
+    text-decoration: none;
+}
+
+/* Hover эффект */
+.button-one:hover {
+    background-color: #364363;    /* новый цвет при наведении */
+    text-decoration: none;
+}
+
+
+

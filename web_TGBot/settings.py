@@ -117,8 +117,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    str(BASE_DIR / 'myapp' / 'static')
-]
-
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+import os
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # убедись, что такая папка реально существует
+]
