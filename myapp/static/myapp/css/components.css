@@ -91,7 +91,11 @@
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+    .main h2{
+        font-size: 1rem;
+    }
+
     .main_card {
         flex-direction: column;   /* картинка сверху, текст под ней */
         align-items: center;
@@ -104,5 +108,10 @@
 
     .main_card-text p {
         max-width: 100%;
+    }
+
+    .img1, .img2, .img3 {
+        width: 200px;
+        height: auto;
     }
 }

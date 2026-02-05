@@ -99,9 +99,14 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .container {
         padding-inline: 2rem; /* меньше отступы на мобильных */
+    }
+
+    .hero__title h1{
+        font-size: 0.8rem;
+        margin-top: 2rem;
     }
 
     .hero__list {
