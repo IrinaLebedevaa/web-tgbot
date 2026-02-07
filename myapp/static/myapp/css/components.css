@@ -1,5 +1,4 @@
 .main {
-
     padding-block: 4rem; /* 96px сверху и снизу */
     background: #ffffff;
     gap: 2rem;
@@ -38,10 +37,10 @@
 
 }
 
-
 .img_frame {
     position: relative;
-    display: inline-block;
+    display: block;
+    width: fit-content;
 }
 
 .img_frame::before {
@@ -91,9 +90,17 @@
     display: block;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 750px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
     .main h2{
-        font-size: 1rem;
+        font-size: 0.9rem;
+        max-width: 70%;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
     }
 
     .main_card {
@@ -101,17 +108,27 @@
         align-items: center;
     }
 
-    .main_card img {
-        width: 100%;              /* растянуть на всю ширину */
-        max-width: 400px;         /* ограничение максимальной ширины */
+    .main_card-text {
+        margin-left: 0;
     }
 
     .main_card-text p {
-        max-width: 100%;
+        max-width: 90%;
+        font-size: 0.8rem;
+    }
+    .img_frame {
+        width: 100%;
+    }
+    .img_frame::before {
+        inset: -10px;
+        border-radius: 0.8rem;
     }
 
     .img1, .img2, .img3 {
-        width: 200px;
+        width: 60%;
         height: auto;
+        border-radius: 0.7rem;
+        display: block;
+        margin: 0 auto;
     }
 }

@@ -12,14 +12,10 @@
     <title>Бот для отслеживания цен на маркетплейсах</title>
     <link rel="icon" type="image/png" href="{% static 'myapp/icon/favicon.png' %}">
     
-    <link rel="stylesheet" href="{% static 'css/components.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/sections.css' %}">
-    <script defer src="{% static 'js/button_main_bot.js' %}"></script>
-    <script defer src="{% static 'js/button_hero_bot.js' %}"></script>
-    <script defer src="{% static 'js/button_hero_card1.js' %}"></script>
-    <script defer src="{% static 'js/button_hero_card2.js' %}"></script>
-    <script defer src="{% static 'js/button_hero_card3.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'myapp/css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/sections.css' %}">
+    <script defer src="{% static 'myapp/js/button.js' %}"></script>
 </head>
 <body>
     <main>
@@ -35,21 +31,21 @@
                     <ul class="hero__list">
                         <li class="hero__card">
                             <span class="hero__card-text">Отслеживает цены на Ozon, WB, Yandex.Market</span>
-                            <button id="button_hero_card1" class="hero__card-btn" onclick="location.href='#main_title_1'">></button>
+                            <button id="button_hero_card1" class="hero__card-btn" onclick="sendClick('button_hero_card1'); location.href='#main_title_1'; ">></button>
                         </li>
                         <li class="hero__card">
                             <span class="hero__card-text">Строит графики изменения цен</span>
-                            <button id="button_hero_card2" class="hero__card-btn" onclick="location.href='#main_title_2'">></button>
+                            <button id="button_hero_card2" class="hero__card-btn" onclick="sendClick('button_hero_card2'); location.href='#main_title_2'">></button>
                         </li>
                         <li class="hero__card">
                             <span class="hero__card-text">Находит выгодные товары</span>
-                            <button id="button_hero_card3" class="hero__card-btn" onclick="location.href='#main_title_3'">></button>
+                            <button id="button_hero_card3" class="hero__card-btn" onclick="sendClick('button_hero_card3'); location.href='#main_title_3'">></button>
                         </li>
                     </ul>
 
 
                     <div id="button_hero_bot" class="hero__button-container">
-                        <a href="https://t.me/marketplace_history_bot?start=ozon1" class="button-one" target="_blank" rel="noopener">Попробовать бота</a>
+                        <a href="https://t.me/marketplace_history_bot?start=ozon1" class="button-one" target="_blank" rel="noopener" onclick="sendClick('button_hero_bot')">Попробовать бота</a>
                     </div>
                 </div>
             </div>
@@ -104,7 +100,7 @@
                     </div>
                 </div>
                 <div id="button_main_bot" class="hero__button-container">
-                    <a href="https://t.me/marketplace_history_bot?start=ozon1" class="button-one">Попробовать бота</a>
+                    <a href="https://t.me/marketplace_history_bot?start=ozon1" class="button-one" onclick="sendClick('button_main_bot')">Попробовать бота</a>
                 </div>
             </div>
         </section>

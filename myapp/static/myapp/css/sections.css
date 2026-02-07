@@ -1,16 +1,13 @@
-/* общий контейнер для горизонтальных отступов и центрирования */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-inline: 5rem; /* 80px слева и справа */
+    padding-inline: 5rem;
 }
 
-/* секция hero с вертикальными отступами */
 .hero {
     padding-block: 3rem; /* 96px сверху и снизу */
     background: #ffffff;
 }
-
 
 .hero-bg {
     max-width: 1350px;
@@ -25,7 +22,7 @@
             #F2E9E5 100%
     );
 
-    border-radius: 48px;
+    border-radius: 3rem;
 }
 
 .hero-bg > * {
@@ -33,7 +30,6 @@
     z-index: 1;
 }
 
-/* заголовки */
 .hero__title h1 {
     font-size: 3rem;
     margin-top: 3rem;
@@ -52,7 +48,6 @@
     color: #3D496D;
 }
 
-/* сетка карточек */
 .hero__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -62,11 +57,10 @@
     margin: 0;
 }
 
-/* карточка */
 .hero__card {
     display: flex;
     justify-content: space-between; /* текст слева, кнопка справа */
-    align-items: center;            /* по вертикали */
+    align-items: center;
     padding: 1.5rem 2.5rem;
 
     border-radius: 20px;
@@ -75,7 +69,6 @@
     text-align: left;
     border: #3D496D 1px solid;
 }
-
 
 .hero__card-text {
     flex: 1; /* текст занимает всё место слева */
@@ -95,26 +88,9 @@
 
 .hero__card-btn:hover {
     background-color: #364363;
-    transform: translateX(4px); /* лёгкое смещение вправо при hover */
+    transform: translateX(4px);
 }
 
-
-@media (max-width: 850px) {
-    .container {
-        padding-inline: 2rem; /* меньше отступы на мобильных */
-    }
-
-    .hero__title h1{
-        font-size: 0.8rem;
-        margin-top: 2rem;
-    }
-
-    .hero__list {
-        gap: 2rem;
-    }
-}
-
-/* Контейнер кнопки, чтобы центрировать и опустить вниз */
 .hero__button-container {
     display: flex;
     justify-content: center; /* по горизонтали */
@@ -124,23 +100,69 @@
 
 /* Стили кнопки */
 .button-one {
-    padding: 1rem 6rem;           /* вертикальные и горизонтальные отступы */
+    padding: 1rem 6rem;     /* вертикальные и горизонтальные отступы */
     font-size: 1.2rem;
     font-family: 'Inter Regular', sans-serif;
     border-radius: 8px;
     background-color: #364363;    /* начальный цвет */
-    color: #fff;                  /* текст белый */
+    color: #fff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease; /* плавный переход цвета */
     text-decoration: none;
 }
 
-/* Hover эффект */
 .button-one:hover {
-    background-color: #364363;    /* новый цвет при наведении */
+    background-color: #364363;
     text-decoration: none;
 }
 
 
+@media (max-width: 750px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-inline: 0.5rem;
+        margin: 0 auto;
+    }
+    .hero-bg {
+        width: 95%;
+        max-width: 100%;
+        padding: 2rem 0;
+        border-radius: 1rem;
+    }
+    .hero__title h1 {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
 
+    .hero__title p {
+        font-size: 0.6rem;
+        margin-top: 1rem;
+    }
+
+    .hero__list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero__card {
+        margin-top: 0.01rem;
+        width: 100%;
+        padding: 1rem 0.9rem;
+        font-size: 0.8rem;
+        border-radius: 14px;
+        gap: 0.4rem;
+    }
+    .hero__card-btn {
+        width: 1rem;
+        height: 1rem;
+        font-size: 0.5rem;
+    }
+    .button-one {
+        padding: 0.6rem 2.5rem;
+        font-size: 0.8rem;
+        border-radius: 8px;
+    }
+}
